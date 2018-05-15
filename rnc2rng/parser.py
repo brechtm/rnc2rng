@@ -553,7 +553,7 @@ def parse(src=None, f=None):
     assert src is None or f is None
     if f is not None and isinstance(f, str_types):
         fn = f
-        with open(fn) as f:
+        with open(fn, encoding='utf-8') as f:
             src = f.read()
     elif f is not None:
         fn, src = f.name, f.read()
